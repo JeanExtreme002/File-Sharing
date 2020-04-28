@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload and Download Files</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Jean Loui Bernard Silva de Jesus"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <script src="./js/script.js"></script>
+    </head>
+    
+    <body class="container" onload="main();">
+
+        <div class="text-center" style="margin-right: 100px; margin-left: 100px;">
+            <img src="favicon.ico" width="150" style="margin: 50px;"/>
+
+            <div class="border border-dark" style="margin-bottom: 50px;">
+                <span id="info" style="font-size: 25px;">No files available for download</span>
+            </div>
+
+            <a id="download" href="/download">
+                <button class="btn btn-success" id="button">Download</button>
+            </a download>
+
+            <button class="btn btn-success" id="button" onclick="selectFile();">Upload</button>
+        </div>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input id="fileUploaded" type="file" name="fileUploaded" hidden="true" required/>
+        </form>
+
+    </body>
+</html>
